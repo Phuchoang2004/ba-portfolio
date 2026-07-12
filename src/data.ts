@@ -69,7 +69,7 @@ export const caseStudies: CaseStudy[] = [
     artifacts: 'An IEEE-compliant SRS, Data Flow Diagrams (DFD), a full UML suite (use-case, activity, sequence, and class diagrams), an ERD, a system architecture design, and Figma UI prototypes.',
     approach:
       'Translated business needs into a three-layer technical architecture (presentation / logic / data), using DFDs to trace exactly where information moved between customer, staff, and admin, before any UI was designed.',
-    tags: ['SRS (IEEE)', 'DFD', 'ERD', 'Figma'],
+    tags: ['SRS (IEEE)', 'DFD', 'ERD', 'TypeScript', 'Figma'],
     link: { label: 'github.com/Phuchoang2004/Online-Electronics-Selling-System', href: 'https://github.com/Phuchoang2004/Online-Electronics-Selling-System' },
     diagrams: ['dfd', 'usecase', 'activity', 'sequence', 'class', 'architecture'],
     diagramImages: {
