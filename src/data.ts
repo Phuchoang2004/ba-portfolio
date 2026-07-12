@@ -31,6 +31,8 @@ export interface CaseStudy {
   diagramImages?: Partial<Record<import('./components/Diagrams').DiagramKey, string>>
 }
 
+const publicAsset = (path: string) => `${((import.meta as any).env?.BASE_URL ?? '/')}${path.replace(/^\/+/, '')}`
+
 export const caseStudies: CaseStudy[] = [
   {
     key: 'capstone',
@@ -49,12 +51,12 @@ export const caseStudies: CaseStudy[] = [
     link: { label: 'Full UML & ERD suite (Drive)', href: 'https://drive.google.com/drive/folders/1nwq6Ae6WZMuupuiMMh5qf6NVt1UPl8Xt?usp=drive_link' },
     diagrams: ['architecture', 'usecase', 'activity', 'sequence', 'class', 'erd'],
     diagramImages: {
-      architecture: '/diagrams/capstone/System Architecture Design - Simplified.drawio.svg',
-      usecase: '/diagrams/capstone/Use Case Diagram.drawio.svg',
-      activity: '/diagrams/capstone/Activity Diagram.drawio.svg',
-      sequence: '/diagrams/capstone/Sequence Diagram.drawio.svg',
-      class: '/diagrams/capstone/Class Diagram.drawio.svg',
-      erd: '/diagrams/capstone/ERD.png',
+      architecture: publicAsset('/diagrams/capstone/System Architecture Design - Simplified.drawio.svg'),
+      usecase: publicAsset('/diagrams/capstone/Use Case Diagram.drawio.svg'),
+      activity: publicAsset('/diagrams/capstone/Activity Diagram.drawio.svg'),
+      sequence: publicAsset('/diagrams/capstone/Sequence Diagram.drawio.svg'),
+      class: publicAsset('/diagrams/capstone/Class Diagram.drawio.svg'),
+      erd: publicAsset('/diagrams/capstone/ERD.png'),
     },
   },
   {
@@ -71,12 +73,12 @@ export const caseStudies: CaseStudy[] = [
     link: { label: 'github.com/Phuchoang2004/Online-Electronics-Selling-System', href: 'https://github.com/Phuchoang2004/Online-Electronics-Selling-System' },
     diagrams: ['dfd', 'usecase', 'activity', 'sequence', 'class', 'architecture'],
     diagramImages: {
-      dfd: '/diagrams/electrostore/DFD.drawio.svg',
-      usecase: '/diagrams/electrostore/Use Case.drawio.svg',
-      sequence: '/diagrams/electrostore/Sequence Diagram.drawio.svg',
-      class: '/diagrams/electrostore/Class Diagram.drawio.svg',
-      activity: '/diagrams/electrostore/Activity Diagram.drawio.svg',
-      architecture: '/diagrams/electrostore/Architecture Design.drawio.svg',
+      dfd: publicAsset('/diagrams/electrostore/DFD.drawio.svg'),
+      usecase: publicAsset('/diagrams/electrostore/Use Case.drawio.svg'),
+      sequence: publicAsset('/diagrams/electrostore/Sequence Diagram.drawio.svg'),
+      class: publicAsset('/diagrams/electrostore/Class Diagram.drawio.svg'),
+      activity: publicAsset('/diagrams/electrostore/Activity Diagram.drawio.svg'),
+      architecture: publicAsset('/diagrams/electrostore/Architecture Design.drawio.svg'),
     },
   },
 ]
